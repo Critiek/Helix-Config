@@ -33,3 +33,24 @@ language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
 [[language]]
 name = "svelte"
 language-servers = [ "svelteserver", "tailwindcss-ls" ]
+
+
+[[language]]
+name = 'powershell'
+scope = 'source.ps1'
+file-types = ['ps1', 'psm1']
+roots = ['.git']
+comment-token = '#'
+indent = { tab-width = 4, unit = '    ' }
+language-servers = [ 'powershell-editor-services' ]
+
+[language-server.powershell-editor-services]
+name = 'powershell-editor-services'
+transport = 'stdio'
+command = 'pwsh'
+args = [
+  '-NoLogo',
+  '-NoProfile',
+  '-Command',
+  "C:\\'Program Files'\\PowerShell\\PowerShellEditorServices\\PowerShellEditorServices\\Start-EditorServices.ps1 -SessionDetailsPath C:\\'Program Files'\\PowerShell\\PowerShellEditorServices\\PowerShellEditorServices.sessions.lsp.json -LanguageServiceOnly -Stdio"
+]
