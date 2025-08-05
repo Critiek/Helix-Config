@@ -12,8 +12,8 @@ normal = "block"
 insert = "bar"
 select = "underline"
 
-[editor.file-picker]
-git-ignore = true
+# [editor.file-picker]
+# git-ignore = true
 
 [editor.indent-guides]
 render = true
